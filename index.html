@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/icon.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shruti Ghate | Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+        }
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #61003c, #0b1029);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* About Section */
+.about {
+        background-color: #ffffff;
+        padding: 50px 20px;
+        text-align: left;
+        color: #000;
+}
+
+/* Skills Section */
+.skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skill {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color:#dee3e7;
+        }
+
+/* Projects Section */
+.projects {
+    background: linear-gradient(135deg, #61003c, #0b1029);
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.project-card {
+    border: none;
+    padding: 25px;
+    margin-bottom: 25px;
+    background: rgb(12, 166, 255);
+    color: #fff;
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    transition: transform 0.3s ease-in-out;
+}
+.project-card:hover {
+    transform: scale(1.01);
+}
+
+/* Buttons */
+.btnPrimary {
+    background: linear-gradient(135deg, #03A9F4, #0277BD);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnPrimary:hover {
+    background: linear-gradient(135deg, #00C6FF, #0072FF);
+    transform: scale(1.01);
+}
+
+.btnSecondary {
+    background: linear-gradient(135deg, #61003c, #0b1029);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnSecondary:hover {
+    background: linear-gradient(135deg, #97035e, #1f2c6d);
+    transform: scale(1.01);
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(0, 0, 0, 0.479);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal-content {
+    background: rgba(255, 255, 255, 0.95);
+    color: #000000;
+    border-radius: 12px;
+}
+
+/* Headers */
+h1{
+    color: #ffffff;
+}
+h2{
+    color: #ffffff;
+}
+h3, h5{
+    color: #000000;
+}
+h4{
+    color: #ffffff;
+}
+h6{
+    color: #ffffff;
+}
+/* Adjust placeholder font size */
+input::placeholder, 
+textarea::placeholder {
+    font-size: 14px; /* Change as needed */
+    color: #777; /* Optional: Light grey color */
+    font-weight: 400; /* Optional: Adjust font weight */
+    opacity: 1; /* Ensure full visibility */
+}
+
+/* If targeting only the contact form */
+#contact-form input::placeholder, 
+#contact-form textarea::placeholder {
+    font-size: 14px;
+}
+
+/* Links */
+a {
+    color: #319ee7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover {
+    color: #0249a5;
+}
+/* Gradient Backgrounds */
+#internships {
+    background: linear-gradient(135deg, #97035e, #1f2c6d);
+    padding: 60px 20px;
+}
+
+#certifications {
+    background: linear-gradient(135deg, #1f2c6d, #0b1029);
+    padding: 60px 20px;
+}
+
+#position {
+    background: linear-gradient(135deg, #97035e, #1f2c6d);
+    padding: 60px 20px;
+}
+
+#hobbies {
+    background: linear-gradient(135deg, #1f2c6d, #0b1029);
+    padding: 60px 20px;
+}
+
+#contact {
+    background: linear-gradient(135deg, #61003c, #0b1029);
+    padding: 60px 20px;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><h4>Shruti Ghate - Portfolio</h4></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#internships">Internships</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#position">Position of Responsibility</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies and Interests</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="home" class="hero">
+        <h1>Welcome to Shruti's portfolio</h1>
+        <p>Full Stack Web Developer | AI Enthusiast | UI/UX Designer</p>
+        <p>
+            <a href="mailto:sghate5655@gmail.com">sghate5655@gmail.com</a> | 
+            <a href="tel:+917498168773">+91 7498168773</a> | 
+            <a href="https://github.com/shruti5655">GitHub</a> | 
+            <a href="https://www.linkedin.com/in/shruti-ghate-888bb8236/">LinkedIn</a>
+        </p>
+        <p>I'm Shruti Ghate, a Computer Engineering student with expertise in full-stack web development, AI, UI/UX design, and mobile app development.</p>
+        
+        <div class="d-flex gap-3">
+            <button class="btnPrimary" data-bs-toggle="modal" data-bs-target="#about-modal">Learn more about me</button>
+            <a href="assets/Shruti_Ghate_CV.pdf" download class="btnPrimary">
+                Download CV <i class="fas fa-download"></i>
+            </a>
+        </div>
+    </div>
+    <section id="about">
+        <div class="container">
+            <h3>About Me</h3>
+            <p><h5>I am a Computer Engineering student at KIT's College of Engineering, Kolhapur (CGPA: 8.5 | 2025). I am passionate about technology and creativity, and have built innovative projects across multiple domains, including AI applications, cloud security, and VR experiences.</h5></p>
+        <h3>Skills</h3>
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">C</div>
+            <div class="skill">Java</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">WordPress</div>
+            <div class="skill">Bootstrap</div>
+            <div class="skill">Clerk</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">React.js</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">MongoDB</div>
+            <div class="skill">Dart</div>
+            <div class="skill">Flutter</div>
+            <div class="skill">Android Studio</div>
+            <div class="skill">Adobe After Effects</div>
+            <div class="skill">Photoshop</div>
+            <div class="skill">Premiere Pro</div>
+            <div class="skill">3D Track</div>
+            <div class="skill">Figma</div>
+            <div class="skill">Blender</div>
+            <div class="skill">Unity</div>
+            <div class="skill">Python (ML)</div>
+            <div class="skill">Microsoft PowerBI</div>
+            <div class="skill">Tableau</div>
+        </div>
+        </div>
+    </section>
+    <div id="projects" class="projects">
+        <h1>Projects</h1>
+        <div class="project-grid">
+            <div class="project-card">
+                <h2>Amelia - Website for Businesses</h2>
+                <p>A conversational AI platform for businesses, providing customizable chatbot interfaces and integrations with popular CRM systems.</p>
+                <button class="btnSecondary" data-bs-toggle="modal" data-bs-target="#amelia-modal">View Project</button>
+            </div>
+            <div class="project-card">
+                <h2>Lowest Price Detection Website</h2>
+                <p>A web app that identifies and displays the lowest product prices across multiple online retailers, using web scraping and real-time price comparisons.</p>
+                <button class="btnSecondary" data-bs-toggle="modal" data-bs-target="#lowest-price-modal">View Project</button>
+            </div>
+            <div class="project-card">
+                <h2>Secure File Storage in Cloud Computing using Hybrid Cryptography</h2>
+                <p>A secure cloud storage system that uses AES encryption for data and RSA for key exchange, ensuring enhanced security and access control.</p>
+                <button class="btnSecondary" data-bs-toggle="modal" data-bs-target="#secure-file-modal">View Project</button>
+            </div>
+            <div class="project-card">
+                <h2>Quick Rent - Rental Service Website</h2>
+                <p>A responsive website for rental services, featuring property listings, search bar, filters, and user registration and login system.</p>
+                <button class="btnSecondary" data-bs-toggle="modal" data-bs-target="#quick-rent-modal">View Project</button>
+            </div>
+            <div class="project-card">
+                <h2>VR Space Exploration Application</h2>
+                <p>An immersive Virtual Reality (VR) space exploration experience, allowing users to explore planets and space stations with interactive 3D models and textures.</p>
+                <button class="btnSecondary" data-bs-toggle="modal" data-bs-target="#vr-space-modal">View Project</button>
+            </div>
+        </div>
+    </div>
+    <div id="internships" class="project">
+        <h2>Internships</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="project-card">
+                <h2>Academor (AI & Machine Learning)</h2>
+                <p><h6>Completed an AI internship and course, gaining hands-on experience in AI projects.</h6></p>
+            </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project-card">
+                <h2>Zeldatech Innovations Pvt. Ltd (Frontend & UI/UX)</h2>
+                <p><h6>Contributed to frontend and UI/UX development for Erox.</h6></p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div id="certifications" class="project">
+        <h2>Certifications and Courses</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="project-card">
+                <h4>Full Stack Web Development (Code with Harry)</h4>
+                <p><h6>Covered HTML, CSS, JavaScript, React, Node.js, MongoDB, MySQL, authentication, and deployment.</h6></p>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card">
+                <h4>Develop a Company Website with WordPress (Coursera)</h4>
+                <p><h6>Learned to develop a company website using WordPress.</h6></p>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card">
+                <h4>Google's Generative AI Course</h4>
+                <p><h6>Completed Google's Generative AI course to learn about AI and machine learning.</h6></p>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card">
+                <h4>UI/UX Design Certification (Udemy)</h4>
+                <p><h6>Received certification in complete Web & Mobile Designer: UI/UX,Figma,+ more</h6></p>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card">
+                <h4>Data Analysis Certification (Accenture)</h4>
+                <p><h6>Received certification in data analysis and visualization.</h6></p>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card">
+                <h4>Complete Figma Megacourse:UI/UX Design Beginner to Expert (Udemy)</h4>
+                <p><h6>Received certification in complete figma Megacourse</h6></p>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card">
+                <h4>UI/UX Design Certification (Great Learning)</h4>
+                <p><h6>Received certification in UI/UX design principles and human-computer interaction.</h6></p>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card">
+                <h4>Python Certification (Great Learning)</h4>
+                <p><h6>Received certification in Python programming language.</h6></p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div id="position" class="project">
+        <h2>Position of Responsibility</h2>
+        <h2>Creative Director (Rotaract Club KIT Sunshine, Kolhapur)</h2>
+        <p>
+            <h6>Led the club’s graphic communication strategy. Designed creative assets using Adobe Photoshop and Figma. Managed branding and advertising content to enhance engagement.<br><br>
+            ● Led the Rotaract Club KIT Sunshine's graphic communication plan.<br>
+            ● Using Adobe Photoshop and Figma, I designed and created interesting graphic content (social media assets, posters, and videos, etc.).<br> 
+            ● Oversaw the production and editing of advertising materials to guarantee a unified brand identity and active audience participation.</h6>
+        </p>
+        
+        <a href="assets/Rtr. Shruti Ghate.png" target="_blank" class="btnPrimary">
+            View Creative Director Badge <i class="fas fa-image"></i>
+        </a>
+    </div>
+    
+    <div id="hobbies" class="project">
+        <h2>Hobbies and Interests</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Swimming</h4>
+                <p><h6>I enjoy swimming as a way to relax and stay fit.</h6></p>
+            </div>
+            <div class="col-md-4">
+                <h4>YouTube Shorts Creation</h4>
+                <p><h6>love creating engaging YouTube Shorts and trending video content.</h6></p>
+            </div>
+            <div class="col-md-4">
+                <h4>Video Editing</h4>
+                <p><h6>I am skilled in video editing and have worked on various creative projects.</h6></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Drawing</h4>
+                <p><h6>Sketching and drawing help me bring my imagination to life.</h6></p>
+            </div>
+            <div class="col-md-4">
+                <h4>Singing</h4>
+                <p><h6>I love singing and have performed in various music events.</h6></p>
+            </div>
+            <div class="col-md-4">
+                <h4>Poster Making</h4>
+                <p><h6>posters allows me to blend creativity with visual storytelling.</h6></p>
+            </div>
+        </div>
+    </div>    
+    <div id="contact" class="container mt-5">
+        <h2>Get in touch</h2>
+        <p><h6>Email: <a href="mailto:sghate5655@gmail.com">sghate5655@gmail.com</a></h6></p>
+        <p><h6>Phone: <a href="tel:+917498168773">+91 7498168773</a></h6></p>
+        <p><h6>GitHub: <a href="https://github.com/shruti5655" target="_blank">shruti5655</a></h6></p>
+        <p><h6>LinkedIn: <a href="https://www.linkedin.com/in/shruti-ghate-888bb8236/" target="_blank">shruti-ghate-888bb8236</a></h6></p>
+        
+        <button class="btnPrimary" onclick="openWhatsApp()">Send Message</button>
+    
+        <!-- Contact Form -->
+        <form id="contact-form" class="mt-4">
+            <h4>Send me a message</h4>
+            <div class="mb-3">
+                <h6><label for="name" class="form-label">Name</label></h6>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+                <h6><label for="email" class="form-label">Email</label></h6>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <h6><label for="message" class="form-label">Message</label></h6>
+                <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="btnPrimary">Submit</button>
+        </form>
+    </div>
+    
+    <!-- JavaScript for WhatsApp Redirection -->
+    <script>
+        function openWhatsApp() {
+            var phoneNumber = "+917498168773"; // Your WhatsApp number
+            var message = encodeURIComponent("Hello Shruti, I would like to connect with you.");
+            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + message;
+            window.open(whatsappUrl, "_blank");
+        }
+</script>  
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shruti Ghate. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="modal fade" id="about-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">About me</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>I am a Computer Engineering student at KIT's College of Engineering, Kolhapur</h3>
+                    <p>I am a passionate Computer Engineering student with strong skills in Python, Java, and C, along with expertise in full-stack web and mobile app development. I have worked with frameworks like Flutter, ReactJS, and NodeJS to develop innovative projects, including a VR Space Exploration App, a Secure Cloud Storage System using Hybrid Cryptography, and a Lowest Price Detection Website. My experience in AI and data analytics, combined with tools like Power BI and Tableau, allows me to create intelligent and data-driven solutions. I also have a deep interest in UI/UX design, using technologies like TailwindCSS, Bootstrap, and Figma to build visually engaging and user-friendly applications.</p>  
+                    <p>Beyond my technical skills, I have gained hands-on experience through internships at Academor, where I worked on AI and ML projects, and Zeldatech Innovations, where I contributed to frontend and UI/UX development for the EROX project. As the Creative Director of the Rotaract Club KIT Sunshine, I led graphic communication and branding initiatives. I am certified in Generative AI, Industry 4.0, and IoT, always staying updated with the latest trends in technology. With a strong problem-solving mindset and a passion for innovation, I strive to build impactful solutions that bridge technology and creativity.
+                </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btnPrimary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="amelia-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Amelia - Website for Businesses</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Developed a website showcasing the functionalities of Amelia, a Conversational AI platform for businesses.</p>
+                    <p>Features:</p>
+                    <ul>
+                        <li>User-friendly interface</li>
+                        <li>Conversational AI capabilities</li>
+                        <li>Businesses can create their own conversational flows</li>
+                    </ul>
+                    <p>Tech stack: HTML, CSS, JavaScript, React, Node.js, MongoDB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="lowest-price-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Lowest Price Detection Website</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Built a web app to identify and display lowest product prices across multiple online retailers using web scraping.</p>
+                    <p>Features:</p>
+                    <ul>
+                        <li>Web scraping using Python</li>
+                        <li>Product price comparison across multiple retailers</li>
+                        <li>User-friendly interface</li>
+                    </ul>
+                    <p>Tech stack: Python, HTML, CSS, JavaScript, Flask</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="secure-file-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Secure File Storage in Cloud Computing using Hybrid Cryptography</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Implemented a secure cloud storage system using AES encryption for data and RSA for key exchange in Python.</p>
+                    <p>Features:</p>
+                    <ul>
+                        <li>Secure file storage using hybrid cryptography</li>
+                        <li>AES encryption for data</li>
+                        <li>RSA encryption for key exchange</li>
+                    </ul>
+                    <p>Tech stack: Python, AES, RSA, Cloud Computing</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="quick-rent-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quick Rent - Rental Service Website</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Designed a responsive website for rental services using HTML, CSS, JavaScript, featuring property listings, search bar, and filters.</p>
+                    <p>Features:</p>
+                    <ul>
+                        <li>Responsive design</li>
+                        <li>Property listings</li>
+                        <li>Search bar and filters</li>
+                    </ul>
+                    <p>Tech stack: HTML, CSS, JavaScript, React, Node.js, MongoDB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vr-space-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">VR Space Exploration Application</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Developed an immersive Virtual Reality (VR) space exploration experience using Unity and C#, allowing users to explore planets and space stations.</p>
+                    <p>Features:</p>
+                    <ul>
+                        <li>Immersive VR experience</li>
+                        <li>Explore planets and space stations</li>
+                        <li>Interactive elements</li>
+                    </ul>
+                    <p>Tech stack: Unity, C#, VR</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
